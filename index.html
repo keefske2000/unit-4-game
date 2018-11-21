@@ -6,7 +6,7 @@
   <title>Crystal Collector</title>
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
  
 </head>
 
@@ -21,7 +21,7 @@
     <div id="container" class="instructions">
       <section class="main-section"> 
           <div class="row">
-        <p>You will be given a random number at the start of the game.</p>
+        <p>Press the random number button to start the game.</p>
         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of point to your total score.</p>
         <p>You win the game by matching your total score to random number,
             you lose the game if your total score goes above the random number.
@@ -36,23 +36,19 @@
 <section>
 <div id="randomNumer">
 
-        <div class="card1" style="width: 18rem;">
-                <div class="card-body">
-                    <p>Random Number:</p>
-                </div>
+            <div class="card1" style="width: 18rem;">
+                <!-- <button id="randomNumber">Random Number</button> -->
+                    <p id="number"></p>
             </div>
-        </div>
+</div>
     
     
-</section>
-    <section>
-        <div id="Wins-Losses">
-    <div class="card2" style="width: 18rem;">
-                <div class="card-body">
-                    <p>Wins:</p>
-                    <p>Losses:</p>
+
+    <div id="Wins-Losses">
+                <div class="card2" style="width: 18rem;">
+                   <p id="Wins">Wins:</p>
+                    <p id="Losses">Losses:</p>
                 </div>
-            </div>
     </div>
 </section>
 
@@ -62,31 +58,35 @@
     
 
     <div id="crystals">
+            
         <div class="rocks">
-           <img src="assets/images/firstimage.jpg" class="img-fluid" alt="" width="150" height="150"  >
+           <img src="assets/images/firstimage.jpg" class="img-fluid" id="one" alt="" width="150" height="150"  >
         </div>
         
         <div class="rocks">
-           <img src="assets/images/download (1).jpg" class="img-fluid" alt="" width="150" height="150" >
+           <img src="assets/images/download (1).jpg" class="img-fluid" id="two" alt="" width="150" height="150" >
         </div>
         
         <div class="rocks">
-           <img src="assets/images/download.jpg" class="img-fluid" alt="" width="150" height="150">
+           <img src="assets/images/download.jpg" class="img-fluid" id="three" alt="" width="150" height="150">
         </div>
 
         <div class="rocks">
-           <img src="assets/images/images.jpg" class="img-fluid" alt="" width="150" height="150">
+           <img src="assets/images/images.jpg" class="img-fluid" id="four" alt="" width="150" height="150">
         </div>
-    
+            </div>
+        
     </div>
 
     <section>
             <div id="userScore">
         <div class="card3" style="width: 18rem;">
-                    <div class="card-body">
+                    <div class="card-body3">
                         <p>Your total score is:</p>
+                        <p id="score"></p>
                         
-                    </div>
+                        
+                     </div>
                 </div>
         </div>
     </section>
