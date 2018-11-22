@@ -1,95 +1,104 @@
 
-// document.getElementById("number").innerHTML = 0;
+
 
 $(document).ready(function(){
-  // var random = ;
-// $("#randomNumber").click(function(){
-//   getRandomNumber(100)
-// })
+ 
 var random=Math.floor(Math.random()*101+19)
 
 $("#number").text(random);
 
-var crystal= Math.floor(Math.random()*11+1)
+var one= Math.floor(Math.random()*11+1)
+  var two= Math.floor(Math.random()*11+1)
+  var three= Math.floor(Math.random()*11+1)
+  var four= Math.floor(Math.random()*11+1)
 
-var Wins= 0;
+  var userTotal= 0;
+  var Wins= 0;
 var Losses= 0;
-var userTotal= 0;
 
-$("#Wins").text(wins);
-$("#losses").text(losses);
 
-// function getRandomNumber() {
-//   var x = Math.floor((Math.random() * 101) + 19);
-//  document.getElementById("number").innerHTML = x;
-//   eval()
-// }
+$("#Wins").text(Wins);
+$("#Losses").text(Losses);
+
+
 
 function reset(){
       random=Math.floor(Math.random()*101+19);
       comnsole.log(random)
-      crystal= Math.floor(Math.random()*11+1);
-      userTotal= 0;
+      $("#number").text(random);
+      
       $("#score").text(userTotal)
 
 }
 
-function yay(){
+function winner(){
   alert("You won!");
     wins++; 
-    $("#Wins").text(wins);
+    $("#Wins-Losses").text(Wins);
     reset();
   }
-  //addes the losses to the userTotal
+ 
   function loser(){
   alert ("You lose!");
     losses++;
-    $("#Losses").text(losses);
+    $("#Wins-Losses").text(Losses);
     reset()
   }
 
   $("#one").on ('click', function(){
-    userTotal = userTotal + num1;
-    console.log("New userTotal= " + userTotal);
+    userTotal = userTotal + one;
+    console.log("userScore= " + userTotal);
     $("#score").text(userTotal); 
-          //sets win/lose conditions
+         
         if (userTotal == random){
-          yay();
+          winner();
         }
         else if ( userTotal > random){
           loser();
         }   
   })  
 
+  $("#two").on ('click', function(){
+    userTotal = userTotal + two;
+    console.log("userScore= " + userTotal);
+    $("#score").text(userTotal); 
+        if (userTotal == random){
+          winner();
+        }
+        else if ( userTotal > random){
+          loser();
+        } 
+  })  
+  $("#three").on ('click', function(){
+    userTotal = userTotal + three;
+    console.log("userScore= " + userTotal);
+    $("#score").text(userTotal);
+
+          if (userTotal == random){
+          winner();
+        }
+        else if ( userTotal > random){
+          loser();
+        } 
+  })  
+  $("#four").on ('click', function(){
+    userTotal = userTotal + four;
+    console.log("userScore= " + userTotal);
+    $("#score").text(userTotal); 
+      
+          if (userTotal == random){
+          winner();
+        }
+        else if ( userTotal > random){
+          loser();
+        }
+
+        WinsChoiceText.textContent = "#Wins-Losses:" + Wins;
+        LoosesChoiceText.textContent = "#Wins-Losses:" + Losses;
+  });  
 
 
-// function eval(){
-//   //if score is what i want 
-//   if (x === random) {
-//       alert("You Win !");
-//     }
-    
-//     else if (x >= random) {
-//       alert("You Lose!");
-//     }
-//   userWin()
-  
-// }
 
-
-// $(document).ready(function(){
-//   // var random = ;
-// $("#randomNumber").click(function(){
-//   getRandomNumber(100)
-// })
-
-
-// $("#number").text(random);
-$("#crystals").click(function(){
-  getRandomNumber(y)
- 
-})
-// 
 
 
 
