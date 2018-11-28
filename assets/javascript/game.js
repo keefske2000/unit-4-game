@@ -33,15 +33,15 @@ function reset(){
 
 function winner(){
   alert("You won!");
-    wins++; 
-    $("#Wins-Losses").text(Wins);
+    Wins++; 
+    $("#Wins").text(Wins);
     reset();
   }
  
   function loser(){
   alert ("You lose!");
-    losses++;
-    $("#Wins-Losses").text(Losses);
+    Losses++;
+    $("#Losses").text(Losses);
     reset()
   }
 
@@ -93,8 +93,7 @@ function winner(){
           loser();
         }
 
-        WinsChoiceText.textContent = "#Wins-Losses:" + Wins;
-        LoosesChoiceText.textContent = "#Wins-Losses:" + Losses;
+        
   });  
 
 
