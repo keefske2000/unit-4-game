@@ -19,6 +19,8 @@
 
 * The player loses if their score goes above the random number.
 
-# The game can be played at this link https://keefske2000.github.io/unit-4-game/  .
+# The game can be played at this link
+
+ https://keefske2000.github.io/unit-4-game/  .
 
 The code for this application can be reviewed at this Github location https://github.com/keefske2000/unit-4-game.git .
